@@ -2,7 +2,9 @@ const removeFromArray = function (arr, index, number = 1) {
   let count = 0;
   let indexes = [];
 
-  arr.forEach(function (item, i, array) {
+    if (!arr.includes(index)) return arr;
+
+  arr.forEach(function (item, i) {
     if (item === index) {
       count += 1;
       indexes.push(i);
