@@ -2,7 +2,7 @@ const sumAll = function (...entries) {
   let arrValues = [];
   let sum = 0;
 
-  let condition = entries.some((num) => num < 0 || !Number.isInteger(num));
+  let condition = entries.some((num) => num < 0 || !Number.isInteger(num) || typeof num === "string" || num.length);
 
   if (condition) return "ERROR";
 
